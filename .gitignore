@@ -314,3 +314,6 @@ Temp/
 exec.app/
 .DS_Store
 Logs/
+Assets/DistantLands
+Assets/Materials
+Assets/Scripts/*.meta
