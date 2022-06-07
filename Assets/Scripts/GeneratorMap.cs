@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class GeneratorMap : MonoBehaviour
 {
@@ -21,10 +22,8 @@ public class GeneratorMap : MonoBehaviour
             newWall1.transform.parent = _THELEVEL;
             newWall2.transform.parent = _THELEVEL;
         }
-        Debug.Log(wallY);
         for (int i = 0; i < wallY; i++)
         {
-            Debug.Log("enter");
             GameObject newWall1 = (GameObject)Instantiate(lvlElements[4], new Vector3((x - 2), y, z - i), Quaternion.identity);
             GameObject newWall2 = (GameObject)Instantiate(lvlElements[4], new Vector3(x + wallX + 1, y, z - i), Quaternion.identity);
             newWall1.transform.parent = _THELEVEL;
@@ -40,6 +39,9 @@ public class GeneratorMap : MonoBehaviour
 
         txt = level.text;
         int lenX = txt.IndexOf('/');
+        int count = txt.Count(f => f == 'c');
+        Debug.Log("COUNT: ");
+        Debug.Log(count);
 
         createWall(lenX, (txt.Length / lenX));
         for (int i = 0; i < txt.Length; i++)

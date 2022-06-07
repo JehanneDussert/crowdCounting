@@ -21,7 +21,6 @@ public class Duplicate : MonoBehaviour
         Random  rd = new Random();
         int     rand = rd.Next(50, 150);
         Console.WriteLine(rand);
-        // Debug.Log("rand: ", rand);
 
         createClone(rand);
     }
@@ -31,7 +30,6 @@ public class Duplicate : MonoBehaviour
         Random rd = new Random();
         double rand = rd.NextDouble() * (0.2f - 0.1f) + 0.1f; //for doubles
 
-        Debug.Log(rand);
         for (int i = 0; i < n; i++)
         {
             GameObject clone = Instantiate(origin, new Vector3(i * (float)rand, origin.transform.position.y, i * (float)rand), origin.transform.rotation);
