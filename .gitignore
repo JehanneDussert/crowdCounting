@@ -317,3 +317,10 @@ Logs/
 Assets/DistantLands
 Assets/Materials
 Assets/Scripts/*.meta
+Assets/*.meta
+DistantLands/
+city.unity
+duplicateTest.unity
+Ressources/
+city.scenetemplate
+Assets/Resources/

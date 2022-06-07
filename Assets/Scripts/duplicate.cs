@@ -19,7 +19,8 @@ public class Duplicate : MonoBehaviour
     void Start()
     {
         Random  rd = new Random();
-        int     rand = rd.Next(100, 200);
+        int     rand = rd.Next(50, 150);
+        Console.WriteLine(rand);
         // Debug.Log("rand: ", rand);
 
         createClone(rand);
@@ -28,7 +29,7 @@ public class Duplicate : MonoBehaviour
     void    createClone(int n)
     {
         Random rd = new Random();
-        double rand = rd.NextDouble(); //for doubles
+        double rand = rd.NextDouble() * (0.2f - 0.1f) + 0.1f; //for doubles
 
         Debug.Log(rand);
         for (int i = 0; i < n; i++)
