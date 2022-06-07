@@ -8,16 +8,16 @@
 	<img src="./Demo/vuePerso.gif" >
 </p>
 
-### ✅ Done
+## ✅ Done
 - [x] Generate random crowd made of clones
 - [x] AI controlling each clone
 
-### 👩🏻‍🔧 To do
+## 👩🏻‍🔧 To do
 - [ ] map parser
 - [ ] crowd counter
 - [ ] crowd generated from a video
 
-### 💬 Unity vocabulary
+## 💬 Unity vocabulary
 
 Selected object: game object<br/>
 Game object (GO) has differents components.<br/>
@@ -47,7 +47,7 @@ Contains properties / settings. Can be applied to several GO<br/>
 Game object child / parent -> drag and drop a GO onto another to make it its child.Positions will be linked.<br/>
 Useful for the camera to follow a defined character.<br/>
 
-### 🖇 Reference
+## 🖇 Reference
 - [Bases of Unity & C#](https://www.youtube.com/watch?v=oeiYBMMWU40&t=343s&ab_channel=LaTechavecBertrand)
 - [Prefab & Game Objects store](https://assetstore.unity.com/)
 - [Simple Crowd AI in Unity 3D](https://www.youtube.com/watch?v=4CCAvUqAC7k&ab_channel=negleft)
