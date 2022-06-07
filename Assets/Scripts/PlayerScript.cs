@@ -22,7 +22,7 @@ public class PlayerScript : MonoBehaviour
 		// translate = method pour faire bouger un objet
 		// Time.fixedDeltaTime = pour calibrer l'accélération qu'on va faire en fonction de la machine sur lequel
 		// jeu est effectué
-		transform.Translate(Vector3.right * -20f * Time.fixedDeltaTime * Input.GetAxis("Vertical"));
-		transform.Translate(Vector3.forward * 20f * Time.fixedDeltaTime * Input.GetAxis("Horizontal"));
+      transform.Translate(Vector3.right * -20f * Time.fixedDeltaTime * Input.GetAxis("Vertical"));
+      transform.Translate(Vector3.forward * 20f * Time.fixedDeltaTime * Input.GetAxis("Horizontal"));
     }
 }

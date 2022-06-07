@@ -11,11 +11,12 @@
 ## ✅ Done
 - [x] Generate random crowd made of clones
 - [x] AI controlling each clone
+- [x] map parser
 
 ## 👩🏻‍🔧 To do
-- [ ] map parser
 - [ ] crowd counter
 - [ ] crowd generated from a video
+- [ ] player rotation
 
 ## 💬 Unity vocabulary
 
@@ -58,6 +59,13 @@ Derived from C/C++, looks like Java.<br/>
 #### Difference public / private
 When a variable in a script is public, it appears on Unity and it can be modified during tests (≠ private).<br/>
 Interesting if you want to try different values in test phase but not in production lol 🤪<br/>
+
+#### Some instructions & keywords
+- Quaternion: basic rotation
+- GameObject = -> to instantiate a new GO (use Instantiate(...)), clones...
+- Vector3: creates a vector whose elements have the specified values
+- transform.Translate(...) -> to move a GO in the direction and distance of translation
+- Time.FixedDelta: expected time interval that physic simulation process should follow
 
 ## 🖇 Reference
 - [Bases of Unity & C#](https://www.youtube.com/watch?v=oeiYBMMWU40&t=343s&ab_channel=LaTechavecBertrand)
