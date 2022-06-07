@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class AIController : MonoBehaviour
 {
-    public float speed = 8f;
+    public float speed = 5f;
     public float sensorLength = 1f;
     float directionVal = 1.0f;
     float turnVal = 0f;
     public float turnSpeed = 50f;
-    public GameObject   originalChar;
 
     Collider myCollider;
 
@@ -17,17 +16,7 @@ public class AIController : MonoBehaviour
     void Start()
     {
         myCollider = transform.GetComponent<Collider>();
-        GameObject charClone = Instantiate(originalChar);
-        // createChar(10);
     }
-
-    // void    createChar(int n)
-    // {
-    //     for (int i = 0; i < n; i++)
-    //     {
-    //         GameObject charClone = Instantiate(originalChar, new Vector3(i * 0.6f, originalChar.transform.position.y, i * 0.75f), originalChar.transform.rotation);
-    //     }
-    // }
 
     // Update is called once per frame
     void Update()

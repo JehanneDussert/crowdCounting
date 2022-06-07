@@ -1,22 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using Random = System.Random;
 
-public class duplicate : MonoBehaviour
+public class Duplicate : MonoBehaviour
 {
-    public GameObject originalChar;
+    public GameObject origin;
+//     static void Main()
+//     {
+//       Random rd = new Random();
+
+//       int rand = rd.Next(100,200);
+
+//       Console.WriteLine(rand);
+//    }
     // Start is called before the first frame update
     void Start()
     {
-        // GameObject charClone = Instantiate(originalChar);
-        createClone(5);
+        Random  rd = new Random();
+        int     rand = rd.Next(100, 200);
+        // Debug.Log("rand: ", rand);
+
+        createClone(rand);
     }
 
     void    createClone(int n)
     {
+        Random rd = new Random();
+        double rand = rd.NextDouble(); //for doubles
+
+        Debug.Log(rand);
         for (int i = 0; i < n; i++)
         {
-            GameObject charClone = Instantiate(originalChar, new Vector3(i * 0.6f, originalChar.transform.position.y, i * 0.75f), originalChar.transform.rotation);
+            GameObject clone = Instantiate(origin, new Vector3(i * (float)rand, origin.transform.position.y, i * (float)rand), origin.transform.rotation);
         }
     }
 
