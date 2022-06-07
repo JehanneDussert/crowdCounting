@@ -1,4 +1,4 @@
-# Crowd counting projet
+# Crowd counting project
 
 <p align="center">
 	<img src="./Demo/vueHaute.gif" >
@@ -21,7 +21,7 @@ Objet sélectionné = game object<br/>
 Le game object a différents composants<br/>
 Assets = dossier qu'on va utiliser dans le game
 
-Deux game objectfs de base dans le jeu :
+Deux game objects de base dans le jeu :
 - la caméra
 - directionnal light
 
