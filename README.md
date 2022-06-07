@@ -1,4 +1,12 @@
-# crowdCounting
+# Crowd counting projet
+
+<p align="center">
+	<img src="./Demo/vueHaute.gif" >
+</p>
+
+<p align="center">
+	<img src="./Demo/vuePerso.gif" >
+</p>
 
 ### Done
 - [x] Generate random crowd made of clones
