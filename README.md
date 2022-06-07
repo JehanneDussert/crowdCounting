@@ -44,8 +44,20 @@ Dimensions are defined by x, y, z (-> depth)<br/>
 Contains properties / settings. Can be applied to several GO<br/>
 
 #### Heritage
-Game object child / parent -> drag and drop a GO onto another to make it its child.Positions will be linked.<br/>
+Game object child / parent -> drag and drop a GO onto another to make it its child. Positions will be linked.<br/>
 Useful for the camera to follow a defined character.<br/>
+
+## 💬 C# vocabulary
+
+#### Global definition
+
+Object-oriented language + typed language.<br/>
+Derived from C/C++, looks like Java.<br/>
+ It is used to develop web applications, as well as desktop applications, web services, commands, widgets or class libraries ([learn more](https://fr.wikipedia.org/wiki/C_sharp)).<br/>
+
+#### Difference public / private
+When a variable in a script is public, it appears on Unity and it can be modified during tests (≠ private).<br/>
+Interesting if you want to try different values in test phase but not in production lol 🤪<br/>
 
 ## 🖇 Reference
 - [Bases of Unity & C#](https://www.youtube.com/watch?v=oeiYBMMWU40&t=343s&ab_channel=LaTechavecBertrand)
