@@ -1,12 +1,12 @@
 # crowdCounting
 
 ### Done
-[x] Generate random crowd made of clones
-[x] AI controlling each clone
+- [x] Generate random crowd made of clones
+- [x] AI controlling each clone
 
 ### To do
-[] crowd counter
-[] crowd generated from a video
+- [] crowd counter
+- [] crowd generated from a video
 
 ### Unity :
 Objet sélectionné = game object<br/>
