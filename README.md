@@ -8,16 +8,16 @@
 	<img src="./Demo/vuePerso.gif" >
 </p>
 
-### Done
+### ✅ Done
 - [x] Generate random crowd made of clones
 - [x] AI controlling each clone
 
-### To do
+### 👩🏻‍🔧 To do
 - [ ] map parser
 - [ ] crowd counter
 - [ ] crowd generated from a video
 
-### Unity vocabulary
+### 💬 Unity vocabulary
 
 Selected object: game object<br/>
 Game object (GO) has differents components.<br/>
