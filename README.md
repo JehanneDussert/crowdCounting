@@ -1,4 +1,4 @@
-# Crowd counting project
+# TwinCity project
 
 <p align="center">
 	<img src="./Demo/vueHaute.gif" >
@@ -15,7 +15,7 @@
 
 ## 👩🏻‍🔧 To do
 - [ ] crowd counter
-- [ ] crowd generated from a video
+- [ ] map generated from a video
 - [ ] player rotation
 
 ## 💬 Unity vocabulary
