@@ -13,32 +13,45 @@
 - [x] AI controlling each clone
 
 ### To do
+- [ ] map parser
 - [ ] crowd counter
 - [ ] crowd generated from a video
 
-### Unity :
-Objet sélectionné = game object<br/>
-Le game object a différents composants<br/>
-Assets = dossier qu'on va utiliser dans le game
+### Unity vocabulary
 
-Deux game objects de base dans le jeu :
-- la caméra
-- directionnal light
+Selected object: game object<br/>
+Game object (GO) has differents components.<br/>
+Assets folder: folder where we're gonna code our game.<br/>
 
-Composant transform : pour définir position game object, échelle, rotation etc<br/>
+#### When you start a new game, two game objects are already present:
+- the camera
+- the directionnal light (to light up our scene)
 
-Scale tool : pour transformer / redimensionner manuellement un game object<br/>
+#### Some information about components:
+- Transform: define position / scale / rotation... of the GO
+- You can add components: C# scripts (or other), rigidbody & box collider for collisions...
+- Mash renderer: to show/hide the GO
 
-Dimensions x/y et z (= profondeur)<br/>
-Material : contains properties / settings<br/>
+#### Some tools:
+- scale tool: to manually resize a game object
+- rotate tool
+- move tool
+- ...
 
-### Composants :
-Mash renderer : pour afficher / cacher le game object<br/>
-Collider : pour gérer les collisions<br/>
+Dimensions are defined by x, y, z (-> depth)<br/>
 
-Game object enfant / parent -> on fait glisser un game object sur un autre pour en faire son enfant. Positions seront liées.<br/>
+#### Material
+Contains properties / settings. Can be applied to several GO<br/>
 
-A consulter pour [ressources supplémentaires](https://assetstore.unity.com/)
+#### Heritage
+Game object child / parent -> drag and drop a GO onto another to make it its child.Positions will be linked.<br/>
+Useful for the camera to follow a defined character.<br/>
+
+### 🖇 Reference
+- [Bases of Unity & C#](https://www.youtube.com/watch?v=oeiYBMMWU40&t=343s&ab_channel=LaTechavecBertrand)
+- [Prefab & Game Objects store](https://assetstore.unity.com/)
+- [Simple Crowd AI in Unity 3D](https://www.youtube.com/watch?v=4CCAvUqAC7k&ab_channel=negleft)
+- [Map parser](https://www.youtube.com/watch?v=uQys5CLDIRE&ab_channel=baptistekleber)
 
 <!-- cas d'usage :
 comptage de foule
