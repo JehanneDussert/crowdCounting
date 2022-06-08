@@ -13,6 +13,12 @@
 - [x] AI controlling each clone
 - [x] map parser
 
+Demo of the simulation with my map parser:
+
+<p align="center">
+	<img src="./Demo/mapParser.gif" >
+</p>
+
 ## 👩🏻‍🔧 To do
 - [ ] crowd counter
 - [ ] map generated from a video
