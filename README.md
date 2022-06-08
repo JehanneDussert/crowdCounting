@@ -64,7 +64,7 @@ Derived from C/C++, looks like Java.<br/>
 
 #### Difference public / private
 When a variable in a script is public, it appears on Unity and it can be modified during tests (≠ private).<br/>
-Interesting if you want to try different values in test phase but not in production lol 🤪<br/>
+Interesting if you want to try different values in test phase but not in production 🤪<br/>
 
 #### Some instructions & keywords
 - Quaternion: basic rotation
