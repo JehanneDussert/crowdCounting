@@ -20,6 +20,13 @@ Demo of the simulation with my map parser:
 </p>
 
 ## 👩🏻‍🔧 To do
+- [ ] character controller (in progress)
+
+<p align="center">
+	<img src="./Demo/move.gif" >
+</p>
+
+- [ ] improve map parser (in progress)
 - [ ] crowd counter
 - [ ] map generated from a video
 - [ ] player rotation
