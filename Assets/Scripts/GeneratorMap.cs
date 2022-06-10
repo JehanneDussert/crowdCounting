@@ -14,6 +14,34 @@ public class GeneratorMap : MonoBehaviour
     private float       x = 0, y = 0, z = 0;    //  positions en temps réel
     private float       originalX, originalY, originalZ;    // positions d'origines
 
+    void    createCrowd(ref float x, float y, float z) {
+        GameObject newObject = (GameObject)Instantiate(lvlElements[2], new Vector3(x, y, z), Quaternion.identity);
+        GameObject newFloor = (GameObject)Instantiate(lvlElements[0], new Vector3(x, y, z), Quaternion.identity);
+        newObject.transform.parent = _THELEVEL;
+        newFloor.transform.parent = _THELEVEL;
+        x++;
+    }
+
+    void    createBuildings(ref float x, float y, float z) {
+        GameObject newObject = (GameObject)Instantiate(lvlElements[1], new Vector3(x, y, z), Quaternion.identity);
+        newObject.transform.parent = _THELEVEL;
+        x++;
+    }
+
+    void    createPlayer(ref float x, float y, float z) {
+        GameObject newObject = (GameObject)Instantiate(lvlElements[3], new Vector3(x, y, z), Quaternion.identity);
+        GameObject newFloor = (GameObject)Instantiate(lvlElements[0], new Vector3(x, y, z), Quaternion.identity);
+        newObject.transform.parent = _THELEVEL;
+        newFloor.transform.parent = _THELEVEL;
+        x++;
+    }
+
+    void    createFloor(ref float x, float y, float z) {
+        GameObject newObject = (GameObject)Instantiate(lvlElements[0], new Vector3(x, y, z), Quaternion.identity);
+        newObject.transform.parent = _THELEVEL;
+        x++;
+    }
+
     void    createWall(int wallX, int wallY) {
         for (int i = -1; i < (wallX + 2); i++)
         {
@@ -44,12 +72,11 @@ public class GeneratorMap : MonoBehaviour
         Debug.Log(count);
 
         createWall(lenX, (txt.Length / lenX));
+
         for (int i = 0; i < txt.Length; i++)
         {
             if (txt.Substring(i, 1).ToLower() == "f") {
-                GameObject newObject = (GameObject)Instantiate(lvlElements[0], new Vector3(x, y, z), Quaternion.identity);
-                newObject.transform.parent = _THELEVEL;
-                x++;
+                createFloor(ref x, y, z);
             }
             else if (txt.Substring(i, 1) == "/") {
                 x = originalX;
@@ -59,23 +86,21 @@ public class GeneratorMap : MonoBehaviour
                 x++;
             }
             else if (txt.Substring(i, 1).ToLower() == "b") {
-                GameObject newObject = (GameObject)Instantiate(lvlElements[1], new Vector3(x, y, z), Quaternion.identity);
-                newObject.transform.parent = _THELEVEL;
-                x++;
+                createBuildings(ref x, y, z);
             }
             else if (txt.Substring(i, 1).ToLower() == "c") {
-                GameObject newObject = (GameObject)Instantiate(lvlElements[2], new Vector3(x, y, z), Quaternion.identity);
-                GameObject newFloor = (GameObject)Instantiate(lvlElements[0], new Vector3(x, y, z), Quaternion.identity);
-                newObject.transform.parent = _THELEVEL;
-                newFloor.transform.parent = _THELEVEL;
-                x++;
+                createCrowd(ref x, y, z);
             }
             else if (txt.Substring(i, 1).ToLower() == "p") {
-                GameObject newObject = (GameObject)Instantiate(lvlElements[3], new Vector3(x, y, z), Quaternion.identity);
+                createPlayer(ref x, y, z);
+            }
+            else if (txt.Substring(i, 1).ToLower() == "a") {
+                GameObject newObject = (GameObject)Instantiate(lvlElements[6], new Vector3(x, y, z), Quaternion.identity);
                 GameObject newFloor = (GameObject)Instantiate(lvlElements[0], new Vector3(x, y, z), Quaternion.identity);
                 newObject.transform.parent = _THELEVEL;
                 newFloor.transform.parent = _THELEVEL;
                 x++;
+                Debug.Log("animation");
             }
         }
 
