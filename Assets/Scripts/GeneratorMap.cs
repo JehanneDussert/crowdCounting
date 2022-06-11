@@ -43,17 +43,23 @@ public class GeneratorMap : MonoBehaviour
     }
 
     void    createWall(int wallX, int wallY) {
-        for (int i = -1; i < (wallX + 2); i++)
+        Debug.Log("z: ");
+        Debug.Log(y);
+        float   minHeight = z + 3;
+        float   maxHeight = z - (wallY * 6) + 3;
+        float   maxWidth = wallX * 6;
+        
+        for (float tmpX = x; tmpX < maxWidth; tmpX += 6)
         {
-            GameObject newWall1 = (GameObject)Instantiate(lvlElements[4], new Vector3(x + i, y, z), Quaternion.identity);
-            GameObject newWall2 = (GameObject)Instantiate(lvlElements[4], new Vector3(x + i, y, z - (wallY - 1)), Quaternion.identity);
+            GameObject newWall1 = (GameObject)Instantiate(lvlElements[4], new Vector3(tmpX, y, minHeight), Quaternion.identity);
+            GameObject newWall2 = (GameObject)Instantiate(lvlElements[4], new Vector3(tmpX, y, maxHeight), Quaternion.identity);
             newWall1.transform.parent = _THELEVEL;
             newWall2.transform.parent = _THELEVEL;
         }
-        for (int i = 0; i < wallY; i++)
+        for (float tmpY = y; tmpY > maxHeight; tmpY -= 6)
         {
-            GameObject newWall1 = (GameObject)Instantiate(lvlElements[4], new Vector3((x - 2), y, z - i), Quaternion.identity);
-            GameObject newWall2 = (GameObject)Instantiate(lvlElements[4], new Vector3(x + wallX + 1, y, z - i), Quaternion.identity);
+            GameObject newWall1 = (GameObject)Instantiate(lvlElements[5], new Vector3(x - 3, y, tmpY), Quaternion.identity);
+            GameObject newWall2 = (GameObject)Instantiate(lvlElements[5], new Vector3(maxWidth - 3, y, tmpY), Quaternion.identity);
             newWall1.transform.parent = _THELEVEL;
             newWall2.transform.parent = _THELEVEL;
         }
@@ -67,11 +73,14 @@ public class GeneratorMap : MonoBehaviour
 
         txt = level.text;
         int lenX = txt.IndexOf('/');
+        int lenY = txt.Count(f => f == '/');
         int count = txt.Count(f => f == 'c');
-        Debug.Log("COUNT: ");
-        Debug.Log(count);
+        Debug.Log("Len X: ");
+        Debug.Log(lenX);
+        Debug.Log("Len Y: ");
+        Debug.Log(lenY);
 
-        // createWall(lenX, (txt.Length / lenX));
+        createWall(lenX, lenY);
 
         for (int i = 0; i < txt.Length; i++)
         {

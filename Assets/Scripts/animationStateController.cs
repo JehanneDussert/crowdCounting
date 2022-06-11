@@ -18,8 +18,8 @@ public class animationStateController : MonoBehaviour
 
     void FixedUpdate()
     {
-      transform.Translate(Vector3.right * -20f * Time.fixedDeltaTime * Input.GetAxis("Vertical"));
-      transform.Translate(Vector3.forward * 20f * Time.fixedDeltaTime * Input.GetAxis("Horizontal"));
+      transform.Translate(Vector3.right * -20f * Time.fixedDeltaTime * Input.GetAxis("Horizontal"));
+      transform.Translate(Vector3.forward * 20f * Time.fixedDeltaTime * Input.GetAxis("Vertical"));
     }
 
     void Update()
@@ -33,7 +33,7 @@ public class animationStateController : MonoBehaviour
         bool    runPressed = Input.GetKey("left shift");
         // Debug.Log("animation controller");
 
-        if (!isWalking && forwardPressed)
+        if (!isWalking && (forwardPressed || backwardPressed))
         {
             Debug.Log("Forward pressed");
             animator.SetBool(isWalkingHash, true);
