@@ -19,13 +19,15 @@ public class GeneratorMap : MonoBehaviour
         GameObject newFloor = (GameObject)Instantiate(lvlElements[0], new Vector3(x, y, z), Quaternion.identity);
         newObject.transform.parent = _THELEVEL;
         newFloor.transform.parent = _THELEVEL;
-        x++;
+        x += 6;
     }
 
     void    createBuildings(ref float x, float y, float z) {
         GameObject newObject = (GameObject)Instantiate(lvlElements[1], new Vector3(x, y, z), Quaternion.identity);
+        GameObject newFloor = (GameObject)Instantiate(lvlElements[0], new Vector3(x, y, z), Quaternion.identity);
         newObject.transform.parent = _THELEVEL;
-        x++;
+        newFloor.transform.parent = _THELEVEL;
+        x += 6;
     }
 
     void    createPlayer(ref float x, float y, float z) {
@@ -98,6 +100,7 @@ public class GeneratorMap : MonoBehaviour
                 createBuildings(ref x, y, z);
             }
             else if (txt.Substring(i, 1).ToLower() == "c") {
+                Debug.Log("creation of a new character");
                 createCrowd(ref x, y, z);
             }
             else if (txt.Substring(i, 1).ToLower() == "p") {

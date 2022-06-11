@@ -20,7 +20,7 @@ public class animationStateController : MonoBehaviour
 
     void FixedUpdate()
     {
-      transform.Translate(Vector3.right * -20f * Time.fixedDeltaTime * Input.GetAxis("Horizontal"));
+      transform.Translate(Vector3.right * 20f * Time.fixedDeltaTime * Input.GetAxis("Horizontal"));
       transform.Translate(Vector3.forward * 20f * Time.fixedDeltaTime * Input.GetAxis("Vertical"));
     }
 
