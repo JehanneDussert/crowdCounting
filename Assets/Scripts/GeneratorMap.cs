@@ -43,31 +43,26 @@ public class GeneratorMap : MonoBehaviour
     }
 
     void    createWall(int wallX, int wallY) {
-        Debug.Log("wallY: ");
-        Debug.Log(wallY);
         Debug.Log("z: ");
-        Debug.Log(z);
-        float   minHeight = 3;
-        float   maxHeight = (z - (wallY * 6) + 3) * -1;
-        Debug.Log("maxHeight: ");
-        Debug.Log(maxHeight);
+        Debug.Log(y);
+        float   minHeight = z + 3;
+        float   maxHeight = z - (wallY * 6) + 3;
         float   maxWidth = wallX * 6;
         
-        // build top wall
         for (float tmpX = x; tmpX < maxWidth; tmpX += 6)
         {
             GameObject newWall1 = (GameObject)Instantiate(lvlElements[4], new Vector3(tmpX, y, minHeight), Quaternion.identity);
             GameObject newWall2 = (GameObject)Instantiate(lvlElements[4], new Vector3(tmpX, y, maxHeight), Quaternion.identity);
             newWall1.transform.parent = _THELEVEL;
-            // newWall2.transform.parent = _THELEVEL;
+            newWall2.transform.parent = _THELEVEL;
         }
-        // for (float tmpY = y; tmpY > maxHeight; tmpY -= 6)
-        // {
-        //     GameObject newWall1 = (GameObject)Instantiate(lvlElements[5], new Vector3(x - 3, y, tmpY), Quaternion.identity);
-        //     GameObject newWall2 = (GameObject)Instantiate(lvlElements[5], new Vector3(maxWidth - 3, y, tmpY), Quaternion.identity);
-        //     newWall1.transform.parent = _THELEVEL;
-        //     newWall2.transform.parent = _THELEVEL;
-        // }
+        for (float tmpY = y; tmpY > maxHeight; tmpY -= 6)
+        {
+            GameObject newWall1 = (GameObject)Instantiate(lvlElements[5], new Vector3(x - 3, y, tmpY), Quaternion.identity);
+            GameObject newWall2 = (GameObject)Instantiate(lvlElements[5], new Vector3(maxWidth - 3, y, tmpY), Quaternion.identity);
+            newWall1.transform.parent = _THELEVEL;
+            newWall2.transform.parent = _THELEVEL;
+        }
     }
 
     void Start()
@@ -77,26 +72,18 @@ public class GeneratorMap : MonoBehaviour
         originalZ = z;
 
         txt = level.text;
-        // int lenX = txt.IndexOf('/');
+        int lenX = txt.IndexOf('/');
         int lenY = txt.Count(f => f == '/');
-        // int count = txt.Count(f => f == 'c');
-        // Debug.Log("Len X: ");
-        // Debug.Log(lenX);
-        // Debug.Log("Len Y: ");
-        // Debug.Log(lenY);
+        int count = txt.Count(f => f == 'c');
+        Debug.Log("Len X: ");
+        Debug.Log(lenX);
+        Debug.Log("Len Y: ");
+        Debug.Log(lenY);
+
+        createWall(lenX, lenY);
 
         for (int i = 0; i < txt.Length; i++)
         {
-            int lenX = txt.IndexOf('/');
-            // int lenY = txt.Count(f => f == '/');
-            Debug.Log("Len X: ");
-            Debug.Log(lenX);
-            // Debug.Log("Len Y: ");
-            // Debug.Log(lenY);
-            if (i == lenY)
-                createWall(lenX, lenY);
-            else
-                createWall(lenX, (int)z);
             if (txt.Substring(i, 1).ToLower() == "f") {
                 createFloor(ref x, y, z);
             }
