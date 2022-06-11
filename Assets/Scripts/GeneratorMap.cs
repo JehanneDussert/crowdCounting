@@ -92,6 +92,7 @@ public class GeneratorMap : MonoBehaviour
                 createCrowd(ref x, y, z);
             }
             else if (txt.Substring(i, 1).ToLower() == "p") {
+                Debug.Log("Create new player");
                 createPlayer(ref x, y, z);
             }
             else if (txt.Substring(i, 1).ToLower() == "a") {

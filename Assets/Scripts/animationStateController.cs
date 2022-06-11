@@ -16,7 +16,12 @@ public class animationStateController : MonoBehaviour
         isRunningHash = Animator.StringToHash("isRunning");
     }
 
-    // Update is called once per frame
+    void FixedUpdate()
+    {
+      transform.Translate(Vector3.right * -20f * Time.fixedDeltaTime * Input.GetAxis("Vertical"));
+      transform.Translate(Vector3.forward * 20f * Time.fixedDeltaTime * Input.GetAxis("Horizontal"));
+    }
+
     void Update()
     {
         bool    isRunning = animator.GetBool(isRunningHash);
@@ -26,23 +31,26 @@ public class animationStateController : MonoBehaviour
         bool    leftPressed = Input.GetKey("left");
         bool    rightPressed = Input.GetKey("right");
         bool    runPressed = Input.GetKey("left shift");
+        // Debug.Log("animation controller");
 
-    //   transform.Translate(Vector3.right * -20f * Time.fixedDeltaTime * Input.GetAxis("Vertical"));
-    //   transform.Translate(Vector3.forward * 20f * Time.fixedDeltaTime * Input.GetAxis("Horizontal"));
         if (!isWalking && forwardPressed)
         {
+            Debug.Log("Forward pressed");
             animator.SetBool(isWalkingHash, true);
         } 
         else if (isWalking && !forwardPressed)
         {
+            Debug.Log("Stop walking");
             animator.SetBool(isWalkingHash, false);
         }
         else if (!isRunning && forwardPressed && runPressed)
         {
+            Debug.Log("Start running");
             animator.SetBool(isRunningHash, true);
         }
         else if (isRunning && (!forwardPressed || !runPressed))
         {
+            Debug.Log("Stop running");
             animator.SetBool(isRunningHash, false);
         }
     }
