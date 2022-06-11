@@ -33,13 +33,13 @@ public class GeneratorMap : MonoBehaviour
         GameObject newFloor = (GameObject)Instantiate(lvlElements[0], new Vector3(x, y, z), Quaternion.identity);
         newObject.transform.parent = _THELEVEL;
         newFloor.transform.parent = _THELEVEL;
-        x++;
+        x += 6;
     }
 
     void    createFloor(ref float x, float y, float z) {
         GameObject newObject = (GameObject)Instantiate(lvlElements[0], new Vector3(x, y, z), Quaternion.identity);
         newObject.transform.parent = _THELEVEL;
-        x++;
+        x += 6;
     }
 
     void    createWall(int wallX, int wallY) {
@@ -71,7 +71,7 @@ public class GeneratorMap : MonoBehaviour
         Debug.Log("COUNT: ");
         Debug.Log(count);
 
-        createWall(lenX, (txt.Length / lenX));
+        // createWall(lenX, (txt.Length / lenX));
 
         for (int i = 0; i < txt.Length; i++)
         {
@@ -80,10 +80,10 @@ public class GeneratorMap : MonoBehaviour
             }
             else if (txt.Substring(i, 1) == "/") {
                 x = originalX;
-                z--;
+                z -= 6;
             }
             else if (txt.Substring(i, 1) == "*") {
-                x++;
+                x += 6;
             }
             else if (txt.Substring(i, 1).ToLower() == "b") {
                 createBuildings(ref x, y, z);
