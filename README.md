@@ -86,6 +86,7 @@ Interesting if you want to try different values in test phase but not in product
 - [Simple Crowd AI in Unity 3D](https://www.youtube.com/watch?v=4CCAvUqAC7k&ab_channel=negleft)
 - [Map parser](https://www.youtube.com/watch?v=uQys5CLDIRE&ab_channel=baptistekleber)
 - The Unity God, very useful to learn movements and animation: [iHeartGameDev](https://www.youtube.com/c/iHeartGameDev/featured)
+- [Mixamo: Animate 3D characters](https://www.mixamo.com/#/)
 
 <!-- cas d'usage :
 comptage de foule
