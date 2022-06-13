@@ -2,9 +2,14 @@
 
 My project is currently composed of a GO called "MapGenerator" taking in parameters:
 - a structure "THELEVEL:level" which will allow me to store all my GOs created at runtime
-- a file "level:map.txt" composed of a ground (represented by an f), walls (created automatically around the map), characters constituting the crowd (c), a single player (p) which will direct the camera and the user's movements, buildings (b)<br/>
-Currently, my player is a woman and my characters are ninjas because ninjas are cool 🥷
+- a file "level:map.txt" composed of :
+	- a ground (represented by an f), walls (created automatically around the map)
+	- characters constituting the crowd (c)
+	- a single player (p) which will direct the camera and the user's movements
+	- buildings (b)<br/><br/>
+Currently, my player is a woman and my characters are ninjas because ninjas are cool 🥷<br/>
 
+Example of an animated map seen from above:
 <p align="center">
 	<img src="./Demo/vueHaute.gif" >
 </p>
