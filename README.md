@@ -5,7 +5,7 @@
 </p>
 
 ## ✅ Done
-- [x] Generate random crowd made of clones
+- [x] generate random crowd made of clones
 - [x] AI controlling each clone
 - [x] map parser
 - [x] character controller (can be improved): can walk, run, rotate
