@@ -4,33 +4,40 @@ using UnityEngine;
 
 public class AIController : MonoBehaviour
 {
-    public float speed = 5f;
-    public float sensorLength = 1f;
-    float directionVal = 1.0f;
-    float turnVal = 0f;
-    public float turnSpeed = 50f;
+    public float    speed = 5f;
+    public float    sensorLength = 1f;
+    float           directionVal = 1.0f;
+    float           turnVal = 0f;
+    public float    turnSpeed = 50f;
+    int             isTurningHash;
 
-    Collider myCollider;
+    Collider        myCollider;
+    Animator        animator;
 
     // Start is called before the first frame update
     void Start()
     {
         myCollider = transform.GetComponent<Collider>();
+        animator = GetComponent<Animator>();
+        isTurningHash = Animator.StringToHash("isTurning");
     }
 
     // Update is called once per frame
     void Update()
     {
-        RaycastHit hit;
-        int flag = 0;
+        RaycastHit  hit;
+        int         flag = 0;
+        bool        isTurning = animator.GetBool(isTurningHash);
 
         // Right Sensor
         if (Physics.Raycast(transform.position, transform.right, out hit, (sensorLength + transform.localScale.x)))
         {
             if (hit.collider.tag != "Obstacle" || hit.collider == myCollider)
             {
+                animator.SetBool(isTurningHash, false);
                 return ;
             }
+            animator.SetBool(isTurningHash, true);
             turnVal -= 1;
             flag++;
         }
@@ -39,8 +46,10 @@ public class AIController : MonoBehaviour
         {
             if (hit.collider.tag != "Obstacle" || hit.collider == myCollider)
             {
+                animator.SetBool(isTurningHash, false);
                 return ;
             }
+            animator.SetBool(isTurningHash, true);
             turnVal += 1;
             flag++;
         }
@@ -49,8 +58,10 @@ public class AIController : MonoBehaviour
         {
             if (hit.collider.tag != "Obstacle" || hit.collider == myCollider)
             {
+                animator.SetBool(isTurningHash, false);
                 return ;
             }
+            animator.SetBool(isTurningHash, true);
             if (directionVal == 1f)
             {
                 directionVal = -1;
@@ -62,8 +73,10 @@ public class AIController : MonoBehaviour
         {
             if (hit.collider.tag != "Obstacle" || hit.collider == myCollider)
             {
+                animator.SetBool(isTurningHash, false);
                 return ;
             }
+            animator.SetBool(isTurningHash, true);
             if (directionVal == -1f)
             {
                 directionVal = 1;

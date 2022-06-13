@@ -4,32 +4,28 @@
 	<img src="./Demo/vueHaute.gif" >
 </p>
 
-<p align="center">
-	<img src="./Demo/vuePerso.gif" >
-</p>
-
 ## ✅ Done
 - [x] Generate random crowd made of clones
 - [x] AI controlling each clone
 - [x] map parser
+- [x] character controller (can be improved): can walk, run, rotate
+- [x] square / rectangular map parser
 
-Demo of the simulation with my map parser:
+Demo of the simulation with my new characters controllers:
+<!-- <p align="center">
+	<img src="./Demo/move.gif" >
+</p> -->
 
 <p align="center">
-	<img src="./Demo/mapParser.gif" >
+	<img src="./Demo/newAnimation.gif" >
 </p>
 
 ## 👩🏻‍🔧 To do
-- [ ] character controller (in progress)
-
-<p align="center">
-	<img src="./Demo/move.gif" >
-</p>
-
-- [ ] improve map parser (in progress)
-- [ ] crowd counter
-- [ ] map generated from a video
-- [ ] player rotation
+- [ ] count the number of people on a video and reproduce this number in my map
+- [ ] reproduce movements captured in a video
+- [ ] create a small town that really exists
+- [ ] improve map parser to manage non-square maps
+<!-- - [ ] crowd counter -->
 
 ## 💬 Unity vocabulary
 
