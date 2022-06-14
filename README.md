@@ -10,7 +10,7 @@ I think my program will be multilingual and composed of:
 - C#
 - Python
 
-## 📝 Generale organization
+## 📝 General organization
 
 My project is currently composed of a Game Object (GO) called "MapGenerator" taking in parameters:
 - a structure "THELEVEL:level" which will allow me to store all my GOs created at runtime
