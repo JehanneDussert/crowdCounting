@@ -66,7 +66,7 @@ public class animationStateController : MonoBehaviour
             Debug.Log("Stop walking backwards");
             animator.SetBool(isWalkingBackwardsHash, false);
         }
-        else if (!isTurningLeft && leftPressed)
+        if (!isTurningLeft && leftPressed)
         {
             Debug.Log("Start turning left");
             animator.SetBool(isTurningLeftHash, true);
@@ -76,7 +76,7 @@ public class animationStateController : MonoBehaviour
             Debug.Log("Stop turning left");
             animator.SetBool(isTurningLeftHash, false);
         }
-        else if (!isTurningRight && rightPressed)
+        if (!isTurningRight && rightPressed)
         {
             Debug.Log("Start turning right");
             animator.SetBool(isTurningRightHash, true);

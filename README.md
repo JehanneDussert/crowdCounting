@@ -1,13 +1,40 @@
 # TwinCity project
 
-My project is currently composed of a GO called "MapGenerator" taking in parameters:
+## 🎯 Goal
+
+Dive into the fabulous world of the metaverse and VR by re-creating a city and its population 👾
+
+## 🔋 Stack
+I think my program will be multilingual and composed of:
+- Unity
+- C#
+- Python
+
+## 📝 Generale organization
+
+My project is currently composed of a Game Object (GO) called "MapGenerator" taking in parameters:
 - a structure "THELEVEL:level" which will allow me to store all my GOs created at runtime
 - a file "level:map.txt" composed of :
-	- a ground (represented by an f), walls (created automatically around the map)
-	- characters constituting the crowd (c)
-	- a single player (p) which will direct the camera and the user's movements
-	- buildings (b)<br/><br/>
-Currently, my player is a woman and my characters are ninjas because ninjas are cool 🥷<br/>
+	- f: ground
+	- walls (created automatically around the map)
+	- c: characters constituting the crowd
+	- p: single player which will direct the camera and the user's movements
+	- b: buildings<br/>
+
+<br/>Currently, my player is a woman and my characters are ninjas because ninjas are cool 🥷<br/>
+
+Example of the content of a very simple map file: 
+```
+ffffffffff/
+ffcffffffb/
+fcfffcfffb/
+fffffcfffb/
+fffcfcfffb/
+fbffpfcffb/
+ffffffcffb/
+bbbbffbbbb/
+ffffffffff/
+```
 
 Example of an animated map seen from above:
 <p align="center">
@@ -31,11 +58,11 @@ Demo of the simulation with my new characters controllers:
 </p>
 
 ## 👩🏻‍🔧 To do
-- [ ] count the number of people on a video and reproduce this number in my map
+- [ ] improve my lighting + shadows
+- [ ] count the number of people on a video and reproduce this number in my map -> I think I'm going to use [OpenCV-Python](https://pyimagesearch.com/2018/08/13/opencv-people-counter/) 🐍
 - [ ] reproduce movements captured in a video
 - [ ] create a small town that really exists
 - [ ] improve map parser to manage non-square maps
-<!-- - [ ] crowd counter -->
 
 ## 💬 Unity vocabulary
 
@@ -93,6 +120,7 @@ Interesting if you want to try different values in test phase but not in product
 - [Map parser](https://www.youtube.com/watch?v=uQys5CLDIRE&ab_channel=baptistekleber)
 - The Unity God, very useful to learn movements and animation: [iHeartGameDev](https://www.youtube.com/c/iHeartGameDev/featured)
 - [Mixamo: Animate 3D characters](https://www.mixamo.com/#/)
+- [OpenCV-Python](https://docs.opencv.org/3.4/d0/de3/tutorial_py_intro.html)
 
 <!-- cas d'usage :
 comptage de foule
