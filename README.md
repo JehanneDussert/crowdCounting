@@ -1,4 +1,6 @@
-# Unity introduction - Presentation for my interview at Etalab
+# Unity introduction
+
+Presentation for my interview at Etalab.
 
 ## 🎯 Goal
 
