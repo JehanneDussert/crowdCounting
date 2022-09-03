@@ -1,4 +1,6 @@
-# TwinCity project
+# Unity introduction
+
+Presentation for my interview at Etalab.
 
 ## 🎯 Goal
 
