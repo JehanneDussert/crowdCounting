@@ -1,5 +1,21 @@
 # Unity introduction
 
+## V2
+
+## 🎯 Goal
+
+[ ] Deepen my knowledge of C# ;
+[x] Parsing more "complex" maps (.json) ;
+[ ] Learn more about procedural and non-procedural construction/generation (buildings, roads, vegetation, traffic lights...) ;
+[ ] Add pedestrians and cars with adapted behaviors ;
+[ ] Managing the passage of time (day/night).
+
+## 📈 In progress
+
+I'm learning more about procedural building from [DilmerV YT channel](https://www.youtube.com/c/DilmerV/videos) 🏢.
+
+## V1
+
 Presentation for my interview at Etalab.
 
 ## 🎯 Goal
