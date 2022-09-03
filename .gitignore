@@ -4,28 +4,28 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # Game settings files
-GameServerApp/Settings/
+v*/GameServerApp/Settings/
 
 # User-specific files
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
+v*/*.suo
+v*/*.user
+v*/*.userosscache
+v*/*.sln.docstates
 
 # User-specific files (MonoDevelop/Xamarin Studio)
-*.userprefs
+v*/*.userprefs
 
 # Build results
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-bld/
-[Bb]in/
-[Oo]bj/
-[Ll]og/
+v*/[Dd]ebug/
+v*/[Dd]ebugPublic/
+v*/[Rr]elease/
+v*/[Rr]eleases/
+v*/x64/
+v*/x86/
+v*/bld/
+v*/[Bb]in/
+v*/[Oo]bj/
+v*/[Ll]og/
 
 # Visual Studio 2015 cache/options directory
 .vs/
@@ -33,8 +33,8 @@ bld/
 #wwwroot/
 
 # MSTest test Results
-[Tt]est[Rr]esult*/
-[Bb]uild[Ll]og.*
+v*/[Tt]est[Rr]esult*/
+v*/[Bb]uild[Ll]og.*
 
 # NUNIT
 *.VisualState.xml
