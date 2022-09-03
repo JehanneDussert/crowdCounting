@@ -4,11 +4,11 @@
 
 ## 🎯 Goal
 
-[ ] Deepen my knowledge of C# ;
-[x] Parsing more "complex" maps (.json) ;
-[ ] Learn more about procedural and non-procedural construction/generation (buildings, roads, vegetation, traffic lights...) ;
-[ ] Add pedestrians and cars with adapted behaviors ;
-[ ] Managing the passage of time (day/night).
+- [ ] Deepen my knowledge of C# ;
+- [x] Parsing more "complex" maps (.json) ;
+- [ ] Learn more about procedural and non-procedural construction/generation (buildings, roads, vegetation, traffic lights...) ;
+- [ ] Add pedestrians and cars with adapted behaviors ;
+- [ ] Managing the passage of time (day/night).
 
 ## 📈 In progress
 
