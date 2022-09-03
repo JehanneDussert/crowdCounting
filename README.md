@@ -20,7 +20,7 @@ Presentation for my interview at Etalab.
 
 ## 🎯 Goal
 
-Dive into the fabulous world of the metaverse and VR by re-creating a city and its population 👾
+Dive into the fabulous world of the metaverse by re-creating a city and its population 👾
 
 ## 🔋 Stack
 I think my program will be multilingual and composed of:
