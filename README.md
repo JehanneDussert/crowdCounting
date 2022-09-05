@@ -4,7 +4,7 @@
 
 ## 🎯 Goal
 
-- [ ] Deepen my knowledge of C# ;
+- [x] Deepen my knowledge of C# (thanks to [Tuto Unity FR](https://www.youtube.com/c/TUTOUNITYFR) ;
 - [x] Parsing more "complex" maps (.json) ;
 - [ ] Learn more about procedural and non-procedural construction/generation (buildings, roads, vegetation, traffic lights...) ;
 - [ ] Add pedestrians and cars with adapted behaviors ;
