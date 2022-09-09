@@ -19,6 +19,7 @@ public class Room
     {
         get
         {
+            Debug.Log("POS : " + position);
             return this.position;
         }
     }

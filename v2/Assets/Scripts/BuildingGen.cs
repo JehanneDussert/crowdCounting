@@ -74,28 +74,34 @@ public class BuildingGen : MonoBehaviour
 
     void Render(Building b)
     {
+		float newX = b.x;
+		float newY = b.y;
         foreach(Floor floor in floors)
         {
+			newX = b.x;
             for(int i = 0; i < b.width; i++)
             {
+				newY = b.y;
                 for(int j = 0; j < b.height; j++)
                 {
                     Room room = floor.rooms[i, j];
-                    var wall1 = Instantiate(wallPrefab, new Vector3(room.RoomPosition.x, floor.FloorNumber, room.RoomPosition.y), Quaternion.Euler(0, 0, 0));
+					var wall1 = Instantiate(wallPrefab, new Vector3(newX, floor.FloorNumber, newY), Quaternion.Euler(0, 0, 0));
                     wall1.transform.parent = transform;
-                    var wall2 = Instantiate(wallPrefab, new Vector3(room.RoomPosition.x, floor.FloorNumber, room.RoomPosition.y), Quaternion.Euler(0, 90, 0));
+                    var wall2 = Instantiate(wallPrefab, new Vector3(newX, floor.FloorNumber, newY), Quaternion.Euler(0, 90, 0));
                     wall2.transform.parent = transform;
-                    var wall3 = Instantiate(wallPrefab, new Vector3(room.RoomPosition.x, floor.FloorNumber, room.RoomPosition.y), Quaternion.Euler(0, 180, 0));
+                    var wall3 = Instantiate(wallPrefab, new Vector3(newX, floor.FloorNumber, newY), Quaternion.Euler(0, 180, 0));
                     wall3.transform.parent = transform;
-                    var wall4 = Instantiate(wallPrefab, new Vector3(room.RoomPosition.x, floor.FloorNumber, room.RoomPosition.y), Quaternion.Euler(0, -90, 0));
+                    var wall4 = Instantiate(wallPrefab, new Vector3(newX, floor.FloorNumber, newY), Quaternion.Euler(0, -90, 0));
                     wall4.transform.parent = transform;
 
                     if (room.HasRoof)
                     {
-                        var roof = Instantiate(roofPrefab, new Vector3(room.RoomPosition.x, floor.FloorNumber, room.RoomPosition.y), Quaternion.identity);
+                        var roof = Instantiate(roofPrefab, new Vector3(newX, floor.FloorNumber, newY), Quaternion.identity);
                         roof.transform.parent = transform;
                     }
+					newY++;
                 }
+				newX++;
             }
         }
     }

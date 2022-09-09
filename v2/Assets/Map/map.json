@@ -14,18 +14,18 @@
                 "id": 0,
                 "type": "type",
                 "nbOfFloors": 1,
-                "x": 2,
-                "y": 2,
+                "x": -30,
+                "y": -32.2,
                 "includeRoof": true,
-                "width": 2,
-                "height": 5
+                "width": 10,
+                "height": 8
             },
             {
                 "id": 1,
                 "type": "type",
                 "nbOfFloors": 3,
-                "x": 4,
-                "y": 5,
+                "x": -25,
+                "y": -40,
                 "includeRoof": true,
                 "width": 2,
                 "height": 5
@@ -34,8 +34,8 @@
                 "id": 2,
                 "type": "type",
                 "nbOfFloors": 2,
-                "x": 0,
-                "y": 0,
+                "x": -20,
+                "y": -18,
                 "includeRoof": true,
                 "width": 2,
                 "height": 5
@@ -44,8 +44,8 @@
                 "id": 3,
                 "type": "type",
                 "nbOfFloors": 2,
-                "x": 10,
-                "y": 20,
+                "x": -10,
+                "y": -9,
                 "includeRoof": true,
                 "width": 2,
                 "height": 5
@@ -53,12 +53,12 @@
             {
                 "id": 4,
                 "type": "type",
-                "nbOfFloors": 2,
-                "x": 9,
-                "y": 8,
+                "nbOfFloors": 10,
+                "x": 0,
+                "y": 0,
                 "includeRoof": true,
-                "width": 2,
-                "height": 5
+                "width": 4,
+                "height": 6
             },
             {
                 "id": 5,
@@ -93,9 +93,9 @@
             {
                 "id": 8,
                 "type": "type",
-                "nbOfFloors": 2,
+                "nbOfFloors": 6,
                 "x": 9.02,
-                "y": 49.23,
+                "y": 40.23,
                 "includeRoof": true,
                 "width": 2,
                 "height": 5
@@ -105,7 +105,7 @@
                 "type": "type",
                 "nbOfFloors": 2,
                 "x": 0.02,
-                "y": 0.23,
+                "y": -23,
                 "includeRoof": true,
                 "width": 2,
                 "height": 5
@@ -116,7 +116,7 @@
                 "nbOfFloors": 2,
                 "x": -9.02,
                 "y": 23.23,
-                "includeRoof": true,
+                "includeRoof": false,
                 "width": 2,
                 "height": 5
             },
@@ -126,8 +126,118 @@
                 "nbOfFloors": 2,
                 "x": -4.02,
                 "y": -3.23,
-                "includeRoof": true,
+                "includeRoof": false,
                 "width": 2,
+                "height": 5
+            },
+            {
+                "id": 12,
+                "type": "type",
+                "nbOfFloors": 2,
+                "x": 16.02,
+                "y": -20.23,
+                "includeRoof": false,
+                "width": 2,
+                "height": 5
+            },
+            {
+                "id": 13,
+                "type": "type",
+                "nbOfFloors": 2,
+                "x": 6.02,
+                "y": -10.23,
+                "includeRoof": false,
+                "width": 2,
+                "height": 5
+            },
+            {
+                "id": 14,
+                "type": "type",
+                "nbOfFloors": 2,
+                "x": 26.02,
+                "y": -30.23,
+                "includeRoof": false,
+                "width": 2,
+                "height": 5
+            },
+            {
+                "id": 15,
+                "type": "type",
+                "nbOfFloors": 2,
+                "x": 0.02,
+                "y": -40.23,
+                "includeRoof": true,
+                "width": 4,
+                "height": 5
+            },
+            {
+                "id": 16,
+                "type": "type",
+                "nbOfFloors": 2,
+                "x": -10.02,
+                "y": 40.23,
+                "includeRoof": true,
+                "width": 4,
+                "height": 5
+            },
+            {
+                "id": 17,
+                "type": "type",
+                "nbOfFloors": 2,
+                "x": -20.02,
+                "y": 30.23,
+                "includeRoof": true,
+                "width": 4,
+                "height": 5
+            },
+            {
+                "id": 18,
+                "type": "type",
+                "nbOfFloors": 2,
+                "x": 30.02,
+                "y": 0.23,
+                "includeRoof": true,
+                "width": 4,
+                "height": 5
+            },
+            {
+                "id": 19,
+                "type": "type",
+                "nbOfFloors": 2,
+                "x": -10.02,
+                "y": 10.23,
+                "includeRoof": true,
+                "width": 4,
+                "height": 5
+            },
+            {
+                "id": 20,
+                "type": "type",
+                "nbOfFloors": 2,
+                "x": -40.02,
+                "y": 0.23,
+                "includeRoof": true,
+                "width": 4,
+                "height": 5
+            },
+            {
+                "id": 21,
+                "type": "type",
+                "nbOfFloors": 2,
+                "x": -30.02,
+                "y": 0.23,
+                "includeRoof": true,
+                "width": 4,
+                "height": 5
+            },
+            {
+                "id": 22,
+                "type": "type",
+                "nbOfFloors": 8,
+                "x": -35.02,
+                "y": 10.23,
+                "includeRoof": true,
+                "width": 7,
                 "height": 5
             }
         ]
