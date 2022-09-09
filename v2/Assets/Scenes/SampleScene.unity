@@ -149,17 +149,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 96592378}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cea1a23261af040f78270013d49e0653, type: 3}
+  m_Script: {fileID: 11500000, guid: 805df47bdfcb64330a53cfe9f8bc9563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallPrefab: {fileID: 7986305966792201406, guid: 8478f62f1c35b4afca225a748e0ef0f6, type: 3}
-  roofPrefab: {fileID: 2937438431625600614, guid: 1a62c79d489e2471f8647b9849368753, type: 3}
-  includeRoof: 0
-  width: 3
-  height: 6
-  cellUnitSize: 2
-  numberOfFloors: 1
-  floors: []
+  readJson: {fileID: 1197961461}
+  procGen: {fileID: 1853232882}
 --- !u!4 &96592380
 Transform:
   m_ObjectHideFlags: 0
@@ -353,6 +347,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1197961460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1197961462}
+  - component: {fileID: 1197961461}
+  m_Layer: 0
+  m_Name: ReadJson
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1197961461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197961460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6db6c7e1159446a92caf54a7c6097f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floor: {fileID: 0}
+  fileName: /map/map.json
+--- !u!4 &1197961462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197961460}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: -0.505}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1698373812
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,10 +422,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37c833160ad834f9682056c19d361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapElement:
-  - {fileID: 3649696876597354260, guid: 4ecd53fa782764d1b9b349f0ca7e846b, type: 3}
-  - {fileID: 7754355363573044436, guid: 5ba1507bfc6a940079eae2d301503e00, type: 3}
-  fileName: /map/map.json
 --- !u!4 &1698373814
 Transform:
   m_ObjectHideFlags: 0
@@ -401,3 +437,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1853232879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1853232881}
+  - component: {fileID: 1853232882}
+  m_Layer: 0
+  m_Name: BuildingGen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1853232881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853232879}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: -0.505}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1853232882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853232879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f133d6122b694c77bda77a9a3a0fec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallPrefab: {fileID: 4440912889792268073, guid: 3be47343dcd874a93847a1e4f74a28a9, type: 3}
+  roofPrefab: {fileID: 8638418100121983112, guid: 6e2e5e0e912b449c584063e09f952a18, type: 3}
+  includeRoof: 0
+  width: 3
+  height: 3
+  cellUnitSize: 1
+  nbOfFloors: 1
+  floors: []

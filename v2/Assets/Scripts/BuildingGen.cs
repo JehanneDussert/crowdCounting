@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProceduralGenerator : MonoBehaviour
+public class BuildingGen : MonoBehaviour
 {
-
     [SerializeField]
     private GameObject wallPrefab;
 
@@ -29,7 +28,15 @@ public class ProceduralGenerator : MonoBehaviour
     [SerializeField]
     private Floor[] floors;
 
-    private void Awake()
+    [SerializeField]
+    private Building building;
+
+    public BuildingGen(Building b)
+    {
+        this.building = b;
+    }
+
+    public void Awake()
     {
         Generate();
         Render();
