@@ -4,72 +4,81 @@ using UnityEngine;
 
 public class BuildingGen : MonoBehaviour
 {
+    private List<Building>  buildings = new List<Building>{};
+
+    [SerializeField]
+    private ReadJson	readJson;
+
     [SerializeField]
     private GameObject wallPrefab;
 
     [SerializeField]
     private GameObject roofPrefab;
     
-    [SerializeField]
-    private bool includeRoof = false;
+    // [SerializeField]
+    // private bool includeRoof = false;
     
-    [SerializeField]
-    private int width = 3;
+    // [SerializeField]
+    // private int width = 3;
     
-    [SerializeField]
-    private int height = 3;
+    // [SerializeField]
+    // private int height = 3;
     
     [SerializeField]
     private float cellUnitSize = 1;
     
-    [SerializeField]
-    private int nbOfFloors = 1;
+    // [SerializeField]
+    // private int nbOfFloors = 1;
     
     [SerializeField]
     private Floor[] floors;
 
     [SerializeField]
     private Building building;
-
-    public BuildingGen(Building b)
+    
+    public void Start() 
     {
-        this.building = b;
-    }
+        buildings = readJson.city.buildings;
 
-    public void Awake()
-    {
-        Generate();
-        Render();
+        foreach (Building b in buildings)
+        {
+			Generate(b);
+			Render(b);
+        }
     }
     
-    void Generate()
+    void Generate(Building b)
     {
-        
-        floors = new Floor[nbOfFloors];
+        floors = new Floor[b.nbOfFloors];
         int floorCount = 0;
 
+		Debug.Log("ID " + b.id);
+		Debug.Log("w: " + b.width);
+		Debug.Log("h: " + b.height);
+		Debug.Log("nb fl: " + b.nbOfFloors);
         foreach (Floor floor in floors)
         {
-            Room[,] rooms = new Room[width, height];
-            for (int i = 0; i < width; i++)
+			Debug.Log("Generate each floor");
+            Room[,] rooms = new Room[b.width, b.height];
+            for (int i = 0; i < b.width; i++)
             {
-                for (int j = 0; j < height; j++)
+                for (int j = 0; j < b.height; j++)
                 {
                     rooms[i, j] = new Room(new Vector2(i * cellUnitSize, j * cellUnitSize),
-                    includeRoof ? (floorCount == floors.Length - 1) : false);
+                    b.includeRoof ? (floorCount == floors.Length - 1) : false);
                 }
             }
             floors[floorCount] = new Floor(floorCount++, rooms);
         }
     }
 
-    void Render()
+    void Render(Building b)
     {
         foreach(Floor floor in floors)
         {
-            for(int i = 0; i < width; i++)
+            for(int i = 0; i < b.width; i++)
             {
-                for(int j = 0; j < height; j++)
+                for(int j = 0; j < b.height; j++)
                 {
                     Room room = floor.rooms[i, j];
                     var wall1 = Instantiate(wallPrefab, new Vector3(room.RoomPosition.x, floor.FloorNumber, room.RoomPosition.y), Quaternion.Euler(0, 0, 0));

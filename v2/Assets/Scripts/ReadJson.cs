@@ -63,12 +63,17 @@ public class ReadJson : MonoBehaviour
 }
 
 public class Building {
-		public int		id;
-		public float	x;
-		public float	y;
-		public int		floors;
-		public string	type;
-		public bool		includeRoof;
+		public int			id;
+		public float		x;
+		public float		y;
+		public int			nbOfFloors;
+		public string		type;
+		public bool			includeRoof;
+		public int			width;
+		public int			height;
+		
+		[SerializeField]
+    	public BuildingGen	buildingGen;
 }
 
 public class City {
