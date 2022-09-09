@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floor: {fileID: 2020167026089375562, guid: 2a7ec71a09d3f40348f32ced178f5e42, type: 3}
-  fileName: /map/map.json
+  fileName: /map/simpleMap.json
 --- !u!4 &1197961462
 Transform:
   m_ObjectHideFlags: 0
@@ -393,6 +393,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   readJson: {fileID: 1197961461}
   wallPrefab: {fileID: 4440912889792268073, guid: 3be47343dcd874a93847a1e4f74a28a9, type: 3}
+  doorPrefab: {fileID: 8834392143412169629, guid: bc94b6ff45b084ab48016d1a1703daa5, type: 3}
   roofPrefab: {fileID: 8638418100121983112, guid: 6e2e5e0e912b449c584063e09f952a18, type: 3}
-  cellUnitSize: 1
   floors: []

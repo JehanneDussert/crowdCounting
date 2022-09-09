@@ -46,7 +46,7 @@ public class ReadJson : MonoBehaviour
 
 	void	createBase(City city)
 	{
-		GameObject newObject = Instantiate(floor, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;  // instatiate the object
+		GameObject newObject = Instantiate(floor, new Vector3(0, -1, 0), Quaternion.identity) as GameObject;  // instatiate the object
 		newObject.transform.localScale = new Vector3(city.width, 1, city.height); // change its local scale in x y z format
 	}
 

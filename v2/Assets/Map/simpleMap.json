@@ -6,26 +6,15 @@
     "city": [
     {
         "name": "Paris",
-        "width": 100,
-        "height": 100,
+        "width": 10,
+        "height": 10,
         "buildings": [
-        
-            {
-                "id": 0,
-                "type": "type",
-                "nbOfFloors": 1,
-                "x": 2,
-                "y": 2,
-                "includeRoof": true,
-                "width": 1,
-                "height": 5
-            },
             {
                 "id": 1,
                 "type": "type",
                 "nbOfFloors": 3,
-                "x": 4,
-                "y": 5,
+                "x": 0,
+                "y": 0,
                 "includeRoof": false,
                 "width": 5,
                 "height": 1

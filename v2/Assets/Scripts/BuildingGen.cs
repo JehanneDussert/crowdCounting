@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class BuildingGen : MonoBehaviour
 {
     private List<Building>  buildings = new List<Building>{};
+	public GameObject[]		prefabObjects;
 
     [SerializeField]
     private ReadJson	readJson;
@@ -13,22 +15,13 @@ public class BuildingGen : MonoBehaviour
     private GameObject wallPrefab;
 
     [SerializeField]
-    private GameObject roofPrefab;
-    
-    // [SerializeField]
-    // private bool includeRoof = false;
-    
-    // [SerializeField]
-    // private int width = 3;
-    
-    // [SerializeField]
-    // private int height = 3;
-    
+    private GameObject doorPrefab;
+
     [SerializeField]
-    private float cellUnitSize = 1;
-    
-    // [SerializeField]
-    // private int nbOfFloors = 1;
+    private GameObject wdwPrefab;
+
+    [SerializeField]
+    private GameObject roofPrefab;
     
     [SerializeField]
     private Floor[] floors;
@@ -52,19 +45,14 @@ public class BuildingGen : MonoBehaviour
         floors = new Floor[b.nbOfFloors];
         int floorCount = 0;
 
-		Debug.Log("ID " + b.id);
-		Debug.Log("w: " + b.width);
-		Debug.Log("h: " + b.height);
-		Debug.Log("nb fl: " + b.nbOfFloors);
         foreach (Floor floor in floors)
         {
-			Debug.Log("Generate each floor");
             Room[,] rooms = new Room[b.width, b.height];
             for (int i = 0; i < b.width; i++)
             {
                 for (int j = 0; j < b.height; j++)
                 {
-                    rooms[i, j] = new Room(new Vector2(i * cellUnitSize, j * cellUnitSize),
+                    rooms[i, j] = new Room(new Vector2(i, j),
                     b.includeRoof ? (floorCount == floors.Length - 1) : false);
                 }
             }
@@ -76,6 +64,8 @@ public class BuildingGen : MonoBehaviour
     {
 		float newX = b.x;
 		float newY = b.y;
+		GameObject prefab;
+
         foreach(Floor floor in floors)
         {
 			newX = b.x;
@@ -84,14 +74,18 @@ public class BuildingGen : MonoBehaviour
 				newY = b.y;
                 for(int j = 0; j < b.height; j++)
                 {
+					if (floors.First() == floor && i == b.width/2)
+						prefab = doorPrefab;
+					else
+						prefab = prefabObjects[Random.Range(0, 2)];
                     Room room = floor.rooms[i, j];
-					var wall1 = Instantiate(wallPrefab, new Vector3(newX, floor.FloorNumber, newY), Quaternion.Euler(0, 0, 0));
+					var wall1 = Instantiate(prefab, new Vector3(newX, floor.FloorNumber, newY), Quaternion.Euler(0, 0, 0));
                     wall1.transform.parent = transform;
-                    var wall2 = Instantiate(wallPrefab, new Vector3(newX, floor.FloorNumber, newY), Quaternion.Euler(0, 90, 0));
+                    var wall2 = Instantiate(prefab, new Vector3(newX, floor.FloorNumber, newY), Quaternion.Euler(0, 90, 0));
                     wall2.transform.parent = transform;
-                    var wall3 = Instantiate(wallPrefab, new Vector3(newX, floor.FloorNumber, newY), Quaternion.Euler(0, 180, 0));
+                    var wall3 = Instantiate(prefab, new Vector3(newX, floor.FloorNumber, newY), Quaternion.Euler(0, 180, 0));
                     wall3.transform.parent = transform;
-                    var wall4 = Instantiate(wallPrefab, new Vector3(newX, floor.FloorNumber, newY), Quaternion.Euler(0, -90, 0));
+                    var wall4 = Instantiate(prefab, new Vector3(newX, floor.FloorNumber, newY), Quaternion.Euler(0, -90, 0));
                     wall4.transform.parent = transform;
 
                     if (room.HasRoof)
