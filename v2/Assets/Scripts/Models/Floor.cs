@@ -6,6 +6,8 @@ using UnityEngine;
 public class Floor
 {
     public int FloorNumber { get; private set; }
+    public int Rows { get; private set; }
+    public int Columns { get; private set; }
 
     [SerializeField]
     public Room[,] rooms;

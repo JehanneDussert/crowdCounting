@@ -11,6 +11,7 @@ public class Room
 
     public Room(Vector2 position, bool hasRoof = false)
     {
+        Debug.Log("room");
         this.position = position;
         this.HasRoof = hasRoof;
     }
